@@ -55,4 +55,14 @@ class UserTest extends TestCase
         $response->assertStatus(401);
     }
 
+    public function user_complete_change()
+    {
+        $faker = Factory::create();
+
+        $response = $this->call('POST','/users/complete-change/2',[
+            'approve' => 1]);
+        //$response->assertStatus(200);
+        $response->assertStatus(401);
+    }
+
 }
