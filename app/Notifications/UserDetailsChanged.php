@@ -47,7 +47,7 @@ class UserDetailsChanged extends Notification
         return (new MailMessage)
             ->greeting("User details changed")
             ->line("User with email '{$this->user->email}' details have been changed.")
-            ->line('Best Regards.');
+            ->line('Kindly help review.');
     }
 
     /**
