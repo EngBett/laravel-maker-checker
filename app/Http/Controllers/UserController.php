@@ -76,7 +76,7 @@ class UserController extends Controller
             \Notification::route('mail',$users)->notify(new UserDetailsChanged($user));
         });
 
-        return response()->json(['message' => 'user changes initiated successfully'], 201);
+        return response()->json(['message' => 'user changes initiated successfully']);
     }
 
     public function CompleteUserUpdate(Request $request, $id)
