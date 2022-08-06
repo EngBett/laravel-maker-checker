@@ -21,11 +21,11 @@ class DatabaseSeeder extends Seeder
             'last_name' => 'admin',
             'email' => 'super.admin@app.dev',
             'email_verified_at' => now(),
-            'is_admin' => rand(0,1),
+            'is_admin' => 1,
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),
         ]);
 
-        \App\Models\User::factory(10)->create();
+        User::factory(10)->create();
     }
 }
